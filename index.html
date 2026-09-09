@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreyas Phansalkar | VLSI & Embedded Systems Engineer</title>
+  <meta name="description" content="Portfolio of Shreyas Phansalkar – Electronics & Telecommunication Engineering student at VIT Pune, specializing in VLSI design, FPGA development, and embedded systems." />
+  <meta name="keywords" content="VLSI, Embedded Systems, FPGA, Verilog, Cadence Virtuoso, Synopsys, RTL Design, Shreyas Phansalkar" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVIGATION ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#publications" class="nav-link">Research</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section id="home" class="hero">
+    <canvas id="circuit-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        <span>B.Tech Electronics & Telecommunication · VIT Pune</span>
+      </div>
+      <h1 class="hero-name">Shreyas<br /><span class="hero-name-accent">Phansalkar</span></h1>
+      <div class="hero-typewriter">
+        <span class="tw-prefix">~/expertise$ </span>
+        <span id="typewriter" class="tw-text"></span>
+        <span class="tw-cursor">▋</span>
+      </div>
+      <p class="hero-sub">
+        Designing silicon from RTL to GDS · FPGA prototyping · Embedded hardware systems<br />
+        CGPA <strong>8.92 / 10.0</strong> · IEEE Published Author
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">View Projects</a>
+        <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">Get in Touch</a>
+        <a href="mailto:shreyas.phansalkar23@vit.edu" class="btn btn-outline" id="hero-resume-btn">📄 Resume</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">8.92</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">7+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">1</span>
+          <span class="stat-label">IEEE Paper</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">3</span>
+          <span class="stat-label">Hackathon Awards</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT ═══════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01. about_me</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="photo-frame">
+            <!-- Place your photo named 'photo.jpg' in the same folder as index.html -->
+            <img src="photo.jpg" alt="Shreyas Phansalkar" class="profile-photo" id="profile-photo" onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex'" />
+            <div class="photo-placeholder" id="photo-placeholder">SP</div>
+            <div class="photo-glow"></div>
+          </div>
+          <div class="about-quick-info">
+            <div class="quick-item">
+              <span class="qi-icon">🎓</span>
+              <div>
+                <div class="qi-label">Institution</div>
+                <div class="qi-val">VIT Pune</div>
+              </div>
+            </div>
+            <div class="quick-item">
+              <span class="qi-icon">📍</span>
+              <div>
+                <div class="qi-label">Location</div>
+                <div class="qi-val">Erandwane, Pune</div>
+              </div>
+            </div>
+            <div class="quick-item">
+              <span class="qi-icon">⚡</span>
+              <div>
+                <div class="qi-label">Specialization</div>
+                <div class="qi-val">VLSI & Embedded</div>
+              </div>
+            </div>
+            <div class="quick-item">
+              <span class="qi-icon">📧</span>
+              <div>
+                <div class="qi-label">Email</div>
+                <div class="qi-val">shreyas.phansalkar23<br/>@vit.edu</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="about-lead">
+            I'm a <strong>Third-Year Electronics & Telecommunication Engineering</strong> student at Vishwakarma Institute of Technology, Pune — passionate about designing hardware that sits at the intersection of silicon and systems.
+          </p>
+          <p class="about-body">
+            My work spans the full hardware stack: from <strong>RTL design in Verilog</strong> and physical layout in <strong>Cadence Virtuoso</strong>, to microcontroller firmware on STM32, ESP32 and PIC18F series, to FPGA prototyping on Xilinx platforms using Vivado. I believe hardware is where the real magic happens — every bit of compute is ultimately physical.
+          </p>
+          <p class="about-body">
+            I've led electronics initiatives at the <strong>International Society of Automation (ISA), VIT Pune</strong>, interned in embedded engineering, and published an IEEE-sponsored paper on energy harvesting at ICFT 2025. I love building things that work in the real world — whether that's a LoRa-based industrial monitor or an Agentic RTL pipeline.
+          </p>
+          <div class="about-education">
+            <h3 class="sub-heading">Education</h3>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <div class="edu-degree">B.Tech — Electronics & Telecommunication Engineering</div>
+                <div class="edu-school">Vishwakarma Institute of Technology, Pune</div>
+                <div class="edu-meta"><span class="edu-cgpa">CGPA 8.92 / 10.0</span> · Aug 2023 – Present</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <div class="edu-degree">Higher Secondary (Class XII)</div>
+                <div class="edu-school">Maharashtra Technical Education Society</div>
+                <div class="edu-meta"><span class="edu-cgpa">78.83%</span> · March 2021 – 2023</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-content">
+                <div class="edu-degree">Secondary (Class X)</div>
+                <div class="edu-school">Jnana Prabodhini Prashala, Pune</div>
+                <div class="edu-meta"><span class="edu-cgpa">92%</span> · June 2015 – 2021</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02. technical_stack</span>
+        <h2>Skills & Tools</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card" data-category="vlsi">
+          <div class="skill-card-icon">🔬</div>
+          <h3>VLSI Design</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">Verilog HDL</span>
+            <span class="stag stag-primary">RTL Design</span>
+            <span class="stag stag-primary">Synthesis</span>
+            <span class="stag stag-primary">STA</span>
+            <span class="stag stag-secondary">Cadence Virtuoso</span>
+            <span class="stag stag-secondary">Synopsys VCS/Verdi</span>
+            <span class="stag stag-secondary">Physical Design</span>
+          </div>
+          <div class="skill-bar-row">
+            <span>Verilog / RTL</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Cadence Virtuoso</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Synopsys VCS</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="fpga">
+          <div class="skill-card-icon">🏗️</div>
+          <h3>FPGA & Digital Design</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">Xilinx Vivado</span>
+            <span class="stag stag-primary">FPGA Prototyping</span>
+            <span class="stag stag-primary">FSM Design</span>
+            <span class="stag stag-secondary">Timing Closure</span>
+            <span class="stag stag-secondary">UART/SPI/I2C on FPGA</span>
+          </div>
+          <div class="skill-bar-row">
+            <span>Vivado / Xilinx</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Digital Logic Design</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="embedded">
+          <div class="skill-card-icon">⚙️</div>
+          <h3>Embedded Systems</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">STM32</span>
+            <span class="stag stag-primary">ESP32 / ESP8266</span>
+            <span class="stag stag-primary">PIC18F</span>
+            <span class="stag stag-primary">Arduino</span>
+            <span class="stag stag-primary">Raspberry Pi</span>
+            <span class="stag stag-secondary">MPLAB IDE</span>
+            <span class="stag stag-secondary">UART · SPI · I2C · CAN</span>
+            <span class="stag stag-secondary">KiCAD</span>
+          </div>
+          <div class="skill-bar-row">
+            <span>STM32 / ESP32</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="87"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>PIC18F Series</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>PCB Design (KiCAD)</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="72"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="programming">
+          <div class="skill-card-icon">💻</div>
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">Verilog</span>
+            <span class="stag stag-primary">C / C++</span>
+            <span class="stag stag-primary">Python</span>
+            <span class="stag stag-secondary">OpenCV</span>
+            <span class="stag stag-secondary">ROS</span>
+            <span class="stag stag-secondary">Git / GitHub</span>
+          </div>
+          <div class="skill-bar-row">
+            <span>C / C++</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>Python</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="protocols">
+          <div class="skill-card-icon">📡</div>
+          <h3>Protocols & Comms</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">UART</span>
+            <span class="stag stag-primary">SPI</span>
+            <span class="stag stag-primary">I2C</span>
+            <span class="stag stag-primary">CAN</span>
+            <span class="stag stag-secondary">LoRa / LoRaWAN</span>
+            <span class="stag stag-secondary">Wireless Charging</span>
+          </div>
+          <div class="skill-bar-row">
+            <span>Serial Protocols</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+          </div>
+          <div class="skill-bar-row">
+            <span>RF / Wireless</span>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-category="tools">
+          <div class="skill-card-icon">🛠️</div>
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="stag stag-primary">Thonny</span>
+            <span class="stag stag-primary">MPLAB X IDE</span>
+            <span class="stag stag-secondary">Raspberry Pi PICO</span>
+            <span class="stag stag-secondary">ROS (Robot OS)</span>
+            <span class="stag stag-secondary">Google Colab</span>
+            <span class="stag stag-secondary">Git</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03. work_experience</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Embedded Systems Intern</h3>
+                <div class="tl-company">Aashman Technicals Pvt Ltd</div>
+              </div>
+              <span class="tl-date">Jun 2026 – Aug 2026</span>
+            </div>
+            <div class="tl-type">
+              <span class="tl-badge tl-badge-embedded">Embedded</span>
+              <span class="tl-badge tl-badge-hardware">Hardware</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Developed a <strong>2-axis GRBL-based laser engraving system</strong> with 1mm positioning accuracy, intended for agricultural weed elimination via targeted laser burning.</li>
+              <li>Designed and implemented a <strong>7-pin input voltage level shifter</strong> using through-hole and SMD components on KiCAD, enabling mixed-voltage interfacing.</li>
+            </ul>
+            <div class="tl-tech">
+              <span>GRBL</span><span>KiCAD</span><span>Motor Control</span><span>PCB Design</span><span>OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Software Development Intern</h3>
+                <div class="tl-company">Upthink Edutech Pvt Ltd</div>
+              </div>
+              <span class="tl-date">Aug 2024 – Dec 2025</span>
+            </div>
+            <div class="tl-type">
+              <span class="tl-badge tl-badge-software">Software</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Developed and enhanced software features for real-world EdTech projects with a focus on clean, efficient code.</li>
+              <li>Designed and implemented customized solutions to process, manage, and integrate data efficiently based on project requirements.</li>
+            </ul>
+            <div class="tl-tech">
+              <span>Python</span><span>Data Processing</span><span>Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Electronics Head</h3>
+                <div class="tl-company">International Society of Automation (ISA) — VIT Pune</div>
+              </div>
+              <span class="tl-date">Dec 2023 – Apr 2025</span>
+            </div>
+            <div class="tl-type">
+              <span class="tl-badge tl-badge-leadership">Leadership</span>
+              <span class="tl-badge tl-badge-hardware">Hardware</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Conducted a <strong>hands-on ROS workshop</strong> to train club members in robotics fundamentals.</li>
+              <li>Coordinated 3 sub-teams across all project milestones, ensuring on-schedule delivery of electronics projects.</li>
+            </ul>
+            <div class="tl-tech">
+              <span>ROS</span><span>Robotics</span><span>Team Lead</span><span>Workshop Design</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04. projects</span>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="project-filters">
+        <button class="pf-btn active" data-filter="all" id="filter-all">All</button>
+        <button class="pf-btn" data-filter="vlsi" id="filter-vlsi">VLSI / RTL</button>
+        <button class="pf-btn" data-filter="fpga" id="filter-fpga">FPGA</button>
+        <button class="pf-btn" data-filter="embedded" id="filter-embedded">Embedded</button>
+        <button class="pf-btn" data-filter="ai" id="filter-ai">AI / Agentic</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project Card 1 -->
+        <article class="proj-card" data-category="ai vlsi" data-project="rtl-gen" id="proj-rtl-gen">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-ai">AI · Agentic</span>
+            <span class="proj-badge badge-vlsi">VLSI · RTL</span>
+            <span class="proj-star">⭐ Featured</span>
+          </div>
+          <h3 class="proj-title">Agentic RTL Generation Pipeline</h3>
+          <p class="proj-sub">End-to-End Multi-Agent NL → Synthesizable Verilog</p>
+          <p class="proj-desc">
+            A 3-agent pipeline (Architect A1 · Engineer A2 · Builder A3) that converts natural language hardware specifications into verified, synthesizable Verilog. Includes syntax guardrails via Icarus Verilog, role-specific dataset curation from Resyn27k / OpenRTLSet, AST extraction for combinational & sequential blocks, and VRAM-optimized hot-swap memory management.
+          </p>
+          <div class="proj-tech-row">
+            <span>Verilog</span><span>Python</span><span>LLM Agents</span><span>Icarus Verilog</span><span>RTL Synthesis</span>
+          </div>
+          <button class="proj-expand-btn" data-project="rtl-gen">View Architecture →</button>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="proj-card" data-category="fpga" data-project="uart-fpga" id="proj-uart-fpga">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-fpga">FPGA</span>
+          </div>
+          <h3 class="proj-title">UART Transmitter on FPGA</h3>
+          <p class="proj-sub">Aug 2025 – Dec 2025</p>
+          <p class="proj-desc">
+            Design and integration of a basic UART (TX/RX) module on an FPGA for serial communication with external devices. Supports data transmission, reception, and real-time serial debugging/monitoring via a reliable asynchronous serial interface implemented in Verilog.
+          </p>
+          <div class="proj-tech-row">
+            <span>Verilog</span><span>Xilinx Vivado</span><span>UART</span><span>FPGA</span><span>Serial Comms</span>
+          </div>
+          <button class="proj-expand-btn" data-project="uart-fpga">View Details →</button>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="proj-card" data-category="fpga" data-project="adaptive-optics" id="proj-adaptive-optics">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-fpga">FPGA</span>
+            <span class="proj-star">⭐ Featured</span>
+          </div>
+          <h3 class="proj-title">FPGA-Based Adaptive Optics</h3>
+          <p class="proj-sub">Aug 2025 – Sep 2025</p>
+          <p class="proj-desc">
+            FPGA-based real-time stabilization system that compensates for telescope vibrations and movements, enabling sharper and more stable astronomical image processing. Implements real-time sensor fusion and actuator control on reconfigurable hardware.
+          </p>
+          <div class="proj-tech-row">
+            <span>Verilog</span><span>Vivado</span><span>Real-time Control</span><span>Signal Processing</span>
+          </div>
+          <button class="proj-expand-btn" data-project="adaptive-optics">View Details →</button>
+        </article>
+
+        <!-- Project Card 4 -->
+        <article class="proj-card" data-category="vlsi embedded" data-project="riscv-secure" id="proj-riscv-secure">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-vlsi">RISC-V · Digital</span>
+            <span class="proj-badge badge-embedded">Embedded</span>
+            <span class="proj-star">🔄 Ongoing</span>
+          </div>
+          <h3 class="proj-title">SecureBoot & Encryption using RISC-V Core</h3>
+          <p class="proj-sub">Aug 2025 – Present</p>
+          <p class="proj-desc">
+            Developing a secure and encrypted storage system for boot-up using a PICORV32 RISC-V soft core with AES encryption. Focuses on hardware-level security primitives, trusted boot chain, and encrypted memory subsystems.
+          </p>
+          <div class="proj-tech-row">
+            <span>RISC-V</span><span>PICORV32</span><span>AES</span><span>Verilog</span><span>Security</span>
+          </div>
+          <button class="proj-expand-btn" data-project="riscv-secure">View Details →</button>
+        </article>
+
+        <!-- Project Card 5 -->
+        <article class="proj-card" data-category="embedded" data-project="lora-control" id="proj-lora-control">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-embedded">Embedded</span>
+            <span class="proj-badge badge-iot">IoT · Sponsored</span>
+          </div>
+          <h3 class="proj-title">LoRa-Based Refrigerator Control System</h3>
+          <p class="proj-sub">Sponsored by Amotech Lab · Aug 2025 – Dec 2025</p>
+          <p class="proj-desc">
+            Configured and validated UART communication on PIC18F452 for reliable LoRa module interfacing and data exchange. Demonstrated a complete end-to-end LoRa-based monitoring and control system, showcasing strong skills in embedded system integration, wireless communication, and industrial automation.
+          </p>
+          <div class="proj-tech-row">
+            <span>PIC18F452</span><span>LoRa</span><span>UART</span><span>MPLAB</span><span>Industrial IoT</span>
+          </div>
+          <button class="proj-expand-btn" data-project="lora-control">View Details →</button>
+        </article>
+
+        <!-- Project Card 6 -->
+        <article class="proj-card" data-category="embedded" data-project="wireless-drone" id="proj-wireless-drone">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-embedded">Embedded</span>
+            <span class="proj-badge badge-iot">Industry Sponsored</span>
+          </div>
+          <h3 class="proj-title">Wireless Charging for Drones</h3>
+          <p class="proj-sub">Industry Sponsored · Jul 2024 – Nov 2024</p>
+          <p class="proj-desc">
+            Implementing an inductive wireless charging system for drones, enabling automatic battery charging without manual intervention. Focused on coil design, resonant frequency matching, and power transfer efficiency in an embedded control framework.
+          </p>
+          <div class="proj-tech-row">
+            <span>Inductive Charging</span><span>Power Electronics</span><span>Embedded C</span><span>PCB Design</span>
+          </div>
+          <button class="proj-expand-btn" data-project="wireless-drone">View Details →</button>
+        </article>
+
+        <!-- Project Card 7 -->
+        <article class="proj-card" data-category="embedded" data-project="lora-remote" id="proj-lora-remote">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-embedded">Embedded</span>
+            <span class="proj-badge badge-iot">Industry Sponsored</span>
+          </div>
+          <h3 class="proj-title">LoRa-Based Remote Control & Monitoring</h3>
+          <p class="proj-sub">Industry Sponsored · Aug 2023 – Dec 2025</p>
+          <p class="proj-desc">
+            Developed a system for monitoring cold storage facilities using PIC18F47K42 and PIC18F452. Combines long-range LoRa communication with real-time temperature/humidity monitoring and remote control capabilities for industrial cold chain management.
+          </p>
+          <div class="proj-tech-row">
+            <span>PIC18F47K42</span><span>PIC18F452</span><span>LoRa</span><span>UART</span><span>Cold Storage</span>
+          </div>
+          <button class="proj-expand-btn" data-project="lora-remote">View Details →</button>
+        </article>
+
+        <!-- Project Card 8 -->
+        <article class="proj-card" data-category="embedded" data-project="laser-engraver" id="proj-laser-engraver">
+          <div class="proj-badge-row">
+            <span class="proj-badge badge-embedded">Embedded</span>
+            <span class="proj-badge badge-ai">Computer Vision</span>
+          </div>
+          <h3 class="proj-title">2-Axis GRBL Laser Engraver (AgriTech)</h3>
+          <p class="proj-sub">Jun 2026 – Aug 2026</p>
+          <p class="proj-desc">
+            2-axis GRBL-based laser engraving system with <strong>1mm positioning accuracy</strong> for agricultural weed detection using OpenCV and targeted laser burning to minimize crop damage. Includes custom 7-pin level shifter PCB designed in KiCAD.
+          </p>
+          <div class="proj-tech-row">
+            <span>GRBL</span><span>OpenCV</span><span>KiCAD</span><span>Stepper Motors</span><span>AgriTech</span>
+          </div>
+          <button class="proj-expand-btn" data-project="laser-engraver">View Details →</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PUBLICATIONS ═══════════════════════ -->
+  <section id="publications" class="section publications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05. research_and_awards</span>
+        <h2>Research & Recognition</h2>
+      </div>
+      <div class="pub-grid">
+
+        <div class="pub-card pub-card-featured">
+          <div class="pub-icon">📄</div>
+          <div class="pub-content">
+            <div class="pub-venue-row">
+              <span class="pub-badge">IEEE</span>
+              <span class="pub-venue">ICFT 2025 — Walchand College of Engineering, Sangli</span>
+              <span class="pub-date">Nov 2025</span>
+            </div>
+            <h3 class="pub-title">Smart Voltaic Keys of Keyboard for Energy Generation</h3>
+            <p class="pub-authors">Rupali Tornekar, <strong>Shreyas Phansalkar</strong>, Pushpa, Sampada Sanap, Samrudhi Dahiwelkar, Ashwini Pulujkar</p>
+            <p class="pub-abstract">
+              Novel energy-harvesting mechanism integrated into keyboard keys using piezoelectric/voltaic elements to capture keystroke mechanical energy and convert it into usable electrical power — advancing self-sustaining HID devices.
+            </p>
+            <div class="pub-tags">
+              <span>Energy Harvesting</span>
+              <span>Smart Devices</span>
+              <span>MEMS</span>
+              <span>IoT</span>
+            </div>
+            <div class="pub-meta">
+              <span>📌 Certificate ID: WCE/ICFT2025/66708/Author/086</span>
+              <span>Technically Sponsored by IEEE Maharashtra Section</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-card">
+            <span class="award-icon">🥈</span>
+            <div class="award-content">
+              <h4>2nd Place</h4>
+              <p>Modern College Hackathon 2024</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <span class="award-icon">🥉</span>
+            <div class="award-content">
+              <h4>3rd Prize</h4>
+              <p>MLSC Hackspiration Hackathon</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <span class="award-icon">🏅</span>
+            <div class="award-content">
+              <h4>208th Rank</h4>
+              <p>Physics Brawl — Charles University</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <span class="award-icon">🌐</span>
+            <div class="award-content">
+              <h4>Maven Silicon</h4>
+              <p>Functional Physical Design</p>
+            </div>
+          </div>
+          <div class="award-card">
+            <span class="award-icon">🔧</span>
+            <div class="award-content">
+              <h4>Maven Silicon</h4>
+              <p>Digital Design (RTL to GDSII)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
+  <section id="certifications" class="section certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 06. certifications</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card" id="cert-verilog">
+          <div class="cert-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#00d4ff" stroke-width="1.5"/><path d="M10 10l6 12 6-12" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cert-content">
+            <div class="cert-issuer">Udemy</div>
+            <h3 class="cert-name">Verilog for an Engineer with Xilinx Vivado Design Suite</h3>
+            <p class="cert-desc">In-depth Verilog HDL course covering RTL coding styles, simulation, synthesis, and Vivado implementation flow for Xilinx FPGAs.</p>
+          </div>
+          <div class="cert-domain">FPGA · VLSI</div>
+        </div>
+
+        <div class="cert-card" id="cert-arch">
+          <div class="cert-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#00d4ff" stroke-width="1.5"/><rect x="9" y="9" width="14" height="14" stroke="#00d4ff" stroke-width="1.5" rx="1"/><path d="M13 13h6M13 16h6M13 19h4" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cert-content">
+            <div class="cert-issuer">Udemy</div>
+            <h3 class="cert-name">Advanced Computer Architecture and Organization</h3>
+            <p class="cert-desc">Deep-dive into processor microarchitecture, cache hierarchies, pipelining, out-of-order execution, and memory systems.</p>
+          </div>
+          <div class="cert-domain">Computer Architecture</div>
+        </div>
+
+        <div class="cert-card" id="cert-fpd">
+          <div class="cert-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#7c3aed" stroke-width="1.5"/><path d="M8 24l8-16 8 16H8z" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cert-content">
+            <div class="cert-issuer">Maven Silicon</div>
+            <h3 class="cert-name">Functional Physical Design</h3>
+            <p class="cert-desc">Floor planning, power planning, placement, CTS, routing, and sign-off using industry EDA tools in an ASIC physical design flow.</p>
+          </div>
+          <div class="cert-domain">Physical Design · VLSI</div>
+        </div>
+
+        <div class="cert-card" id="cert-dd">
+          <div class="cert-logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#7c3aed" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="cert-content">
+            <div class="cert-issuer">Maven Silicon</div>
+            <h3 class="cert-name">Digital Design (RTL to GDSII)</h3>
+            <p class="cert-desc">Complete ASIC digital design flow from RTL specification through synthesis, STA, DFT, and GDSII tape-out using Synopsys & Cadence tools.</p>
+          </div>
+          <div class="cert-domain">ASIC · RTL · VLSI</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 07. contact</span>
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p class="contact-lead">
+            Looking to collaborate on <strong>VLSI design</strong>, <strong>FPGA projects</strong>, or <strong>embedded systems</strong> work? Or just want to connect?
+          </p>
+          <p>I'm open to research collaborations, internship opportunities, and interesting hardware projects. Feel free to reach out!</p>
+          <div class="contact-links">
+            <a href="mailto:shreyas.phansalkar23@vit.edu" class="contact-link" id="email-link">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/></svg>
+              shreyas.phansalkar23@vit.edu
+            </a>
+            <a href="https://www.linkedin.com/in/shreyasphansalkar" target="_blank" rel="noopener" class="contact-link" id="linkedin-link">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+              linkedin.com/in/shreyasphansalkar
+            </a>
+            <a href="tel:+918669563324" class="contact-link" id="phone-link">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.93 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.84 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.92 16.91z" stroke="currentColor" stroke-width="1.5"/></svg>
+              +91 86695 63324
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <div class="form-group">
+              <label for="cf-name">Your Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="VLSI Collaboration / Internship / Research..." />
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="cf-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>SP<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">
+          Designed & built with ❤️ by <strong>Shreyas Phansalkar</strong> · VLSI & Embedded Systems Engineer
+        </p>
+        <p class="footer-sub">B.Tech ENTC · VIT Pune · 2023–2027</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════ PROJECT MODAL ═══════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="projectModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
