@@ -38,14 +38,16 @@ function highlightActiveNav() {
 
 // ── Typewriter Effect ─────────────────────────────────────────
 const phrases = [
-  'VLSI Design Engineer',
-  'RTL to GDS Flow',
+  'RTL Design Engineer',
+  'Embedded Systems Engineer',
+  'VLSI · RTL to GDS Flow',
+  'Firmware Developer',
   'FPGA Developer',
-  'Embedded Systems',
   'Verilog · Cadence · Synopsys',
-  'Agentic RTL Pipeline',
-  'PIC18F · STM32 · ESP32',
+  'STM32 · ESP32 · PIC18F',
   'LoRa · UART · SPI · I2C',
+  'Fresher · Class of 2027',
+  'Agentic RTL Pipeline',
 ];
 let twIndex = 0, twChar = 0, twDeleting = false;
 const twEl = document.getElementById('typewriter');
