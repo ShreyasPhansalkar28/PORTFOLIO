@@ -328,18 +328,70 @@ document.addEventListener('keydown', e => {
 
 // ── Contact form ──────────────────────────────────────────────
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('cf-submit');
-  btn.textContent = '✓ Message Sent!';
-  btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-  btn.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.4)';
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-    btn.style.boxShadow = '';
-    contactForm.reset();
-  }, 3500);
+
+  // Loading state
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  btn.style.opacity = '0.75';
+  btn.style.cursor = 'not-allowed';
+
+  try {
+    const formData = new FormData(contactForm);
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' },
+    });
+
+    if (response.ok) {
+      // ✅ Success
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+      btn.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.4)';
+      btn.style.opacity = '1';
+      btn.style.cursor = 'default';
+      contactForm.reset();
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+        btn.disabled = false;
+        btn.style.cursor = 'pointer';
+      }, 4000);
+    } else {
+      // ❌ Formspree returned an error
+      const data = await response.json();
+      const errorMsg = (data.errors || []).map(e => e.message).join(', ') || 'Submission failed. Please try again.';
+      btn.textContent = '✗ Error — Try Again';
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #b91c1c)';
+      btn.style.boxShadow = '0 4px 20px rgba(239, 68, 68, 0.4)';
+      btn.style.opacity = '1';
+      btn.style.cursor = 'pointer';
+      btn.disabled = false;
+      console.error('Formspree error:', errorMsg);
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+      }, 4000);
+    }
+  } catch (err) {
+    // ❌ Network / fetch error
+    btn.textContent = '✗ Network Error';
+    btn.style.background = 'linear-gradient(135deg, #ef4444, #b91c1c)';
+    btn.style.opacity = '1';
+    btn.style.cursor = 'pointer';
+    btn.disabled = false;
+    console.error('Fetch error:', err);
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      btn.style.boxShadow = '';
+    }, 4000);
+  }
 });
 
 // ── Circuit board canvas animation ────────────────────────────

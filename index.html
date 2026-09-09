@@ -97,12 +97,18 @@
         <h2>Who I Am</h2>
       </div>
       <div class="about-grid">
+
+        <!-- LEFT COLUMN: Photo + quick info -->
         <div class="about-photo-col">
-          <div class="photo-frame">
-            <!-- Place your photo named 'photo.jpg' in the same folder as index.html -->
-            <img src="DSC_6030.JPG" alt="Shreyas Phansalkar" class="profile-photo" id="profile-photo" onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex'" />
+          <div class="photo-wrapper">
+            <div class="photo-border-ring"></div>
+            <img src="DSC_6030.JPG" alt="Shreyas Phansalkar" class="profile-photo" id="profile-photo"
+              onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex'" />
             <div class="photo-placeholder" id="photo-placeholder">SP</div>
-            <div class="photo-glow"></div>
+          </div>
+          <div class="about-status-badge">
+            <span class="status-dot"></span>
+            <span>Open to Opportunities</span>
           </div>
           <div class="about-quick-info">
             <div class="quick-item">
@@ -123,36 +129,56 @@
               <span class="qi-icon">⚡</span>
               <div>
                 <div class="qi-label">Specialization</div>
-                <div class="qi-val">VLSI & Embedded</div>
+                <div class="qi-val">VLSI &amp; Embedded</div>
               </div>
             </div>
             <div class="quick-item">
               <span class="qi-icon">📧</span>
               <div>
                 <div class="qi-label">Email</div>
-                <div class="qi-val">shreyas.phansalkar23<br/>@vit.edu</div>
+                <div class="qi-val">shreyas.phansalkar23@vit.edu</div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- RIGHT COLUMN: Bio + education -->
         <div class="about-text-col">
+          <div class="about-tagline">
+            <span class="tq-quote">"</span>From RTL to GDS — I build silicon, not just software.<span class="tq-quote">"</span>
+          </div>
           <p class="about-lead">
-            I'm a <strong>Third-Year Electronics & Telecommunication Engineering</strong> student at Vishwakarma Institute of Technology, Pune — passionate about designing hardware that sits at the intersection of silicon and systems.
+            I'm a <strong>Final-Year Electronics &amp; Telecommunication Engineering</strong> student at
+            Vishwakarma Institute of Technology, Pune — driven by a passion for designing hardware at
+            the intersection of silicon, systems, and intelligence.
           </p>
           <p class="about-body">
-            My work spans the full hardware stack: from <strong>RTL design in Verilog</strong> and physical layout in <strong>Cadence Virtuoso</strong>, to microcontroller firmware on STM32, ESP32 and PIC18F series, to FPGA prototyping on Xilinx platforms using Vivado. I believe hardware is where the real magic happens — every bit of compute is ultimately physical.
+            My work spans the full hardware stack: from <strong>RTL design in Verilog</strong> and
+            physical layout in <strong>Cadence Virtuoso</strong>, to microcontroller firmware on STM32,
+            ESP32 and PIC18F, to FPGA prototyping on Xilinx Vivado. I believe hardware is where the
+            real magic happens — every bit of compute is ultimately physical.
           </p>
           <p class="about-body">
-            I've led electronics initiatives at the <strong>International Society of Automation (ISA), VIT Pune</strong>, interned in embedded engineering, and published an IEEE-sponsored paper on energy harvesting at ICFT 2025. I love building things that work in the real world — whether that's a LoRa-based industrial monitor or an Agentic RTL pipeline.
+            I've led electronics initiatives at the <strong>International Society of Automation (ISA),
+            VIT Pune</strong>, completed two industry internships, and published an IEEE-sponsored paper
+            on energy harvesting at ICFT 2025. I thrive at the boundary where circuit meets code.
           </p>
+
+          <div class="about-highlights">
+            <div class="highlight-chip">🏆 IEEE Published Author</div>
+            <div class="highlight-chip">⚙️ 2× Industry Internships</div>
+            <div class="highlight-chip">🔬 VLSI · FPGA · Embedded</div>
+            <div class="highlight-chip">📡 LoRa · AES · RISC-V</div>
+          </div>
+
           <div class="about-education">
             <h3 class="sub-heading">Education</h3>
             <div class="edu-item">
               <div class="edu-dot"></div>
               <div class="edu-content">
-                <div class="edu-degree">B.Tech — Electronics & Telecommunication Engineering</div>
+                <div class="edu-degree">B.Tech — Electronics &amp; Telecommunication Engineering</div>
                 <div class="edu-school">Vishwakarma Institute of Technology, Pune</div>
-                <div class="edu-meta"><span class="edu-cgpa">CGPA 8.92 / 10.0</span> · Aug 2023 – Present</div>
+                <div class="edu-meta"><span class="edu-cgpa">CGPA 8.92 / 10.0</span> · Aug 2023 – Present &nbsp;<span class="edu-year-badge">Final Year</span></div>
               </div>
             </div>
             <div class="edu-item">
@@ -160,7 +186,7 @@
               <div class="edu-content">
                 <div class="edu-degree">Higher Secondary (Class XII)</div>
                 <div class="edu-school">Maharashtra Technical Education Society</div>
-                <div class="edu-meta"><span class="edu-cgpa">78.83%</span> · March 2021 – 2023</div>
+                <div class="edu-meta"><span class="edu-cgpa">78.83%</span> · 2021 – 2023</div>
               </div>
             </div>
             <div class="edu-item">
@@ -168,11 +194,12 @@
               <div class="edu-content">
                 <div class="edu-degree">Secondary (Class X)</div>
                 <div class="edu-school">Jnana Prabodhini Prashala, Pune</div>
-                <div class="edu-meta"><span class="edu-cgpa">92%</span> · June 2015 – 2021</div>
+                <div class="edu-meta"><span class="edu-cgpa">92%</span> · 2015 – 2021</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
