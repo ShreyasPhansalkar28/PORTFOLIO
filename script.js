@@ -38,15 +38,14 @@ function highlightActiveNav() {
 
 // ── Typewriter Effect ─────────────────────────────────────────
 const phrases = [
-  'RTL Design Engineer',
+  'RTL Design · Static Timing Analysis',
   'Embedded Systems Engineer',
   'VLSI · RTL to GDS Flow',
   'Firmware Developer',
   'FPGA Developer',
-  'Verilog · Cadence · Synopsys',
+  'Verilog · Cadence Virtuoso · Synopsys: VCS & Verdi',
   'STM32 · ESP32 · PIC18F',
   'LoRa · UART · SPI · I2C',
-  'Fresher · Class of 2027',
   'Agentic RTL Pipeline',
 ];
 let twIndex = 0, twChar = 0, twDeleting = false;
