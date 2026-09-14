@@ -512,3 +512,23 @@ document.querySelectorAll('.proj-card').forEach((card, i) => {
 document.querySelectorAll('.cert-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.08}s`;
 });
+
+// ── Theme Toggle ──────────────────────────────────────────────
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'dark';
+
+if (currentTheme === 'light') {
+  document.documentElement.setAttribute('data-theme', 'light');
+}
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+});
+

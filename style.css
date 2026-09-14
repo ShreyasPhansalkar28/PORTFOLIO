@@ -39,6 +39,48 @@
 
   --font-sans:     'Inter', system-ui, sans-serif;
   --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+  
+  --nav-bg:        rgba(5, 10, 18, 0.85);
+  --nav-bg-scrolled: rgba(5, 10, 18, 0.97);
+}
+
+[data-theme="light"] {
+  --bg-primary:    #f8fafc;
+  --bg-secondary:  #f1f5f9;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-glass:      rgba(255, 255, 255, 0.85);
+
+  --cyan:          #0284c7;
+  --cyan-dim:      #0369a1;
+  --cyan-glow:     rgba(2, 132, 199, 0.15);
+  --cyan-glow-sm:  rgba(2, 132, 199, 0.08);
+  --blue:          #2563eb;
+  --blue-light:    #3b82f6;
+  --purple:        #7c3aed;
+  --purple-light:  #8b5cf6;
+
+  --text-primary:  #0f172a;
+  --text-secondary:#334155;
+  --text-muted:    #64748b;
+  --text-code:     #0284c7;
+
+  --border:        rgba(15, 23, 42, 0.15);
+  --border-hover:  rgba(15, 23, 42, 0.3);
+  
+  --shadow-cyan:   0 0 30px rgba(2, 132, 199, 0.12);
+  --shadow-card:   0 8px 32px rgba(0, 0, 0, 0.08);
+
+  --nav-bg:        rgba(255, 255, 255, 0.85);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.97);
+}
+
+[data-theme="light"] .hero {
+  background: linear-gradient(to bottom, rgba(248,250,252,0.85) 0%, rgba(248,250,252,0.98) 100%),
+              url('circuit_bg.jpg') center/cover no-repeat;
+}
+[data-theme="light"] .modal-overlay {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 /* ── Reset ── */
@@ -77,15 +119,40 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(5, 10, 18, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
 #navbar.scrolled {
-  background: rgba(5, 10, 18, 0.97);
+  background: var(--nav-bg-scrolled);
   border-bottom-color: rgba(0, 212, 255, 0.25);
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+.theme-toggle:hover {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--cyan);
+}
+.theme-toggle .sun-icon { display: none; }
+.theme-toggle .moon-icon { display: block; }
+[data-theme="light"] .theme-toggle .sun-icon { display: block; }
+[data-theme="light"] .theme-toggle .moon-icon { display: none; }
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
