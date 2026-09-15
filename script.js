@@ -329,6 +329,19 @@ document.addEventListener('keydown', e => {
 
 // ── Contact form ──────────────────────────────────────────────
 const contactForm = document.getElementById('contactForm');
+let resumeDownloadRequested = false;
+
+const resumeBtn = document.getElementById('hero-resume-btn');
+if (resumeBtn) {
+  resumeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    resumeDownloadRequested = true;
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('cf-submit');
@@ -355,6 +368,17 @@ contactForm.addEventListener('submit', async (e) => {
       btn.style.opacity = '1';
       btn.style.cursor = 'default';
       contactForm.reset();
+      
+      if (resumeDownloadRequested) {
+        const link = document.createElement('a');
+        link.href = 'RESUME.pdf';
+        link.download = 'Shreyas_Phansalkar_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        resumeDownloadRequested = false;
+      }
+
       setTimeout(() => {
         btn.textContent = 'Send Message';
         btn.style.background = '';
