@@ -30,7 +30,7 @@
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#publications" class="nav-link">Research</a></li>
-          <li><a href="#certifications" class="nav-link">Certs</a></li>
+          <li><a href="#certifications" class="nav-link">Certs &amp; Docs</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
@@ -64,6 +64,10 @@
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary" id="hero-projects-btn">View Projects</a>
+        <a href="#certifications" class="btn btn-glow-cert" id="hero-certs-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          📜 View Certifications &amp; Docs
+        </a>
         <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">Get in Touch</a>
         <a href="RESUME.pdf" download="Shreyas_Phansalkar_Resume.pdf" class="btn btn-outline" id="hero-resume-btn">📄 Download Resume</a>
       </div>
@@ -84,8 +88,8 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-val">3</span>
-          <span class="stat-label">Hackathon Awards</span>
+          <span class="stat-val">12</span>
+          <span class="stat-label">Certificates &amp; Docs</span>
         </div>
       </div>
     </div>
@@ -744,61 +748,378 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ CERTIFICATIONS ═══════════════════════ -->
+  <!-- ═══════════════════════ CERTIFICATIONS & DOCUMENTS ═══════════════════════ -->
   <section id="certifications" class="section certifications">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// 06. certifications</span>
-        <h2>Certifications</h2>
+      <div class="section-header cert-section-header">
+        <div>
+          <span class="section-tag">// 06. credentials_and_documents</span>
+          <h2>Certifications &amp; Documents</h2>
+          <p class="section-lead-cert">Official course credentials, research presentation letters, international honors, and industry internship verification documents.</p>
+        </div>
+        <button class="btn btn-primary" id="open-cert-gallery-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="m14 8 4 4-4 4"/></svg>
+          📜 Open Document Gallery
+        </button>
       </div>
+
+      <!-- Category Filter Bar -->
+      <div class="cert-filter-bar">
+        <button class="cf-btn active" data-cert-filter="all">All Documents <span class="cf-count">12</span></button>
+        <button class="cf-btn" data-cert-filter="vlsi">VLSI &amp; EDA</button>
+        <button class="cf-btn" data-cert-filter="hardware-embedded">Embedded &amp; Architecture</button>
+        <button class="cf-btn" data-cert-filter="research-awards">Research &amp; Honors</button>
+        <button class="cf-btn" data-cert-filter="experience">Internships &amp; Letters</button>
+      </div>
+
       <div class="cert-grid">
 
-        <div class="cert-card" id="cert-verilog">
-          <div class="cert-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#00d4ff" stroke-width="1.5"/><path d="M10 10l6 12 6-12" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <!-- 1. Maven Silicon Digital Design -->
+        <div class="cert-card" data-category="vlsi" id="card-maven-digital-design">
+          <div class="cert-thumb-box" data-cert-id="maven-digital-design">
+            <img src="certificates/thumbnails/Maven_Silicon_Digital_Design_Certificate_thumb.webp" alt="Maven Silicon Digital Design Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
           </div>
           <div class="cert-content">
-            <div class="cert-issuer">Udemy</div>
-            <h3 class="cert-name">Verilog for an Engineer with Xilinx Vivado Design Suite</h3>
-            <p class="cert-desc">In-depth Verilog HDL course covering RTL coding styles, simulation, synthesis, and Vivado implementation flow for Xilinx FPGAs.</p>
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Maven Silicon</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Digital Design (RTL to GDSII Flow)</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 20 May 2026</span>
+              <span class="cert-id">MSUID: 9921062050</span>
+            </div>
+            <p class="cert-desc">ASIC digital design flow covering RTL modeling, logic synthesis, Static Timing Analysis (STA), clock tree synthesis, and GDSII sign-off.</p>
+            <div class="cert-tags">
+              <span>Verilog HDL</span><span>RTL to GDSII</span><span>STA</span><span>ASIC</span><span>EDA</span>
+            </div>
           </div>
-          <div class="cert-domain">FPGA · VLSI</div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="maven-digital-design">📄 View Document</button>
+            <a href="certificates/Maven_Silicon_Digital_Design_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
         </div>
 
-        <div class="cert-card" id="cert-arch">
-          <div class="cert-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#00d4ff" stroke-width="1.5"/><rect x="9" y="9" width="14" height="14" stroke="#00d4ff" stroke-width="1.5" rx="1"/><path d="M13 13h6M13 16h6M13 19h4" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <!-- 2. Udemy Verilog FPGA Vivado -->
+        <div class="cert-card" data-category="vlsi" id="card-udemy-verilog-fpga">
+          <div class="cert-thumb-box" data-cert-id="udemy-verilog-fpga">
+            <img src="certificates/thumbnails/Udemy_Verilog_FPGA_Xilinx_Vivado_Design_Suite_thumb.webp" alt="Udemy Verilog FPGA Vivado Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
           </div>
           <div class="cert-content">
-            <div class="cert-issuer">Udemy</div>
-            <h3 class="cert-name">Advanced Computer Architecture and Organization</h3>
-            <p class="cert-desc">Deep-dive into processor microarchitecture, cache hierarchies, pipelining, out-of-order execution, and memory systems.</p>
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Udemy</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Verilog for an FPGA Engineer with Xilinx Vivado</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 27 March 2026</span>
+              <span class="cert-id">ID: UC-6cd73604-650a...</span>
+            </div>
+            <p class="cert-desc">16.5-hour in-depth training on RTL coding styles, testbenches, simulation, timing constraints, and Vivado synthesis for Xilinx FPGAs.</p>
+            <div class="cert-tags">
+              <span>Verilog HDL</span><span>Xilinx Vivado</span><span>FPGA</span><span>Simulation</span>
+            </div>
           </div>
-          <div class="cert-domain">Computer Architecture</div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="udemy-verilog-fpga">📄 View Document</button>
+            <a href="certificates/Udemy_Verilog_FPGA_Xilinx_Vivado_Design_Suite.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
         </div>
 
-        <div class="cert-card" id="cert-fpd">
-          <div class="cert-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#7c3aed" stroke-width="1.5"/><path d="M8 24l8-16 8 16H8z" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <!-- 3. Udemy Computer Architecture -->
+        <div class="cert-card" data-category="hardware-embedded" id="card-udemy-computer-arch">
+          <div class="cert-thumb-box" data-cert-id="udemy-computer-arch">
+            <img src="certificates/thumbnails/Udemy_Advanced_Computer_Architecture_and_Organization_thumb.webp" alt="Udemy Advanced Computer Architecture Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
           </div>
           <div class="cert-content">
-            <div class="cert-issuer">Maven Silicon</div>
-            <h3 class="cert-name">Functional Physical Design</h3>
-            <p class="cert-desc">Floor planning, power planning, placement, CTS, routing, and sign-off using industry EDA tools in an ASIC physical design flow.</p>
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Udemy</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Advanced Computer Architecture &amp; Organization</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 18 January 2026</span>
+              <span class="cert-id">ID: UC-fffb1d33-36b5...</span>
+            </div>
+            <p class="cert-desc">Processor microarchitecture, multi-stage pipelining hazards, cache hierarchies, memory interleaving, and instruction-level parallelism (ILP).</p>
+            <div class="cert-tags">
+              <span>Microarchitecture</span><span>Pipelining</span><span>Cache</span><span>ILP</span>
+            </div>
           </div>
-          <div class="cert-domain">Physical Design · VLSI</div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="udemy-computer-arch">📄 View Document</button>
+            <a href="certificates/Udemy_Advanced_Computer_Architecture_and_Organization.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
         </div>
 
-        <div class="cert-card" id="cert-dd">
-          <div class="cert-logo">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" stroke="#7c3aed" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <!-- 4. Coursera Deep Learning Specialization -->
+        <div class="cert-card" data-category="vlsi" id="card-coursera-deeplearning">
+          <div class="cert-thumb-box" data-cert-id="coursera-deeplearning">
+            <img src="certificates/thumbnails/DeepLearning_AI_Coursera_Specialization_thumb.webp" alt="Coursera Deep Learning Specialization Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
           </div>
           <div class="cert-content">
-            <div class="cert-issuer">Maven Silicon</div>
-            <h3 class="cert-name">Digital Design (RTL to GDSII)</h3>
-            <p class="cert-desc">Complete ASIC digital design flow from RTL specification through synthesis, STA, DFT, and GDSII tape-out using Synopsys & Cadence tools.</p>
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">DeepLearning.AI · Coursera</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Deep Learning Specialization (5 Courses)</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 29 March 2026</span>
+              <span class="cert-id">ID: 8EHPZA8GVCFA</span>
+            </div>
+            <p class="cert-desc">5-course specialization by Andrew Ng covering CNNs, RNNs/LSTMs, Transformers, and hyperparameter optimization for AI hardware applications.</p>
+            <div class="cert-tags">
+              <span>Deep Learning</span><span>CNN</span><span>Transformers</span><span>TensorFlow</span><span>Edge AI</span>
+            </div>
           </div>
-          <div class="cert-domain">ASIC · RTL · VLSI</div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="coursera-deeplearning">📄 View Document</button>
+            <a href="certificates/DeepLearning_AI_Coursera_Specialization.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 5. IEEE ICFT 2025 Paper Presentation -->
+        <div class="cert-card" data-category="research-awards" id="card-ieee-icft2025">
+          <div class="cert-thumb-box" data-cert-id="ieee-icft2025">
+            <img src="certificates/thumbnails/IEEE_ICFT2025_Smart_Voltaic_Keys_Paper_Presentation_thumb.webp" alt="IEEE ICFT 2025 Presentation Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">IEEE Maharashtra Section</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Smart Voltaic Keys (IEEE ICFT 2025 Presentation)</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 7–8 November 2025</span>
+              <span class="cert-id">WCE/ICFT2025/66708/086</span>
+            </div>
+            <p class="cert-desc">Paper presentation certificate for novel piezoelectric/voltaic energy-harvesting mechanism integrated into keyboard keys for self-powered HID devices.</p>
+            <div class="cert-tags">
+              <span>IEEE</span><span>Energy Harvesting</span><span>Piezoelectric</span><span>MEMS</span><span>IoT</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="ieee-icft2025">📄 View Document</button>
+            <a href="certificates/IEEE_ICFT2025_Smart_Voltaic_Keys_Paper_Presentation.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 6. Charles University Physics Brawl -->
+        <div class="cert-card" data-category="research-awards" id="card-physics-brawl">
+          <div class="cert-thumb-box" data-cert-id="physics-brawl-charles">
+            <img src="certificates/thumbnails/Charles_University_Physics_Brawl_208th_Rank_thumb.webp" alt="Charles University Physics Brawl Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Charles University, Prague</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Physics Brawl Online — 208th Rank Globally</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 23 November 2022</span>
+              <span class="cert-id">Team: The Three Musketeers</span>
+            </div>
+            <p class="cert-desc">International physics competition diploma awarded by Faculty of Mathematics &amp; Physics, Charles University. Ranked 208th globally in Category A.</p>
+            <div class="cert-tags">
+              <span>Physics Brawl</span><span>Charles University</span><span>Global Rank</span><span>Mechanics</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="physics-brawl-charles">📄 View Document</button>
+            <a href="certificates/Charles_University_Physics_Brawl_208th_Rank.png" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 7. Devfolio & MLSC Hackspiration -->
+        <div class="cert-card" data-category="research-awards" id="card-hackspiration">
+          <div class="cert-thumb-box" data-cert-id="devfolio-hackspiration">
+            <img src="certificates/thumbnails/Devfolio_MLSC_Hackspiration24_Certificate_thumb.webp" alt="Devfolio Hackspiration 24 Certificate" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Devfolio · MLSC VIT Pune</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Hackspiration'24 Certificate of Innovation</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 Hackathon 2024</span>
+              <span class="cert-id">Microsoft Learn Ambassador</span>
+            </div>
+            <p class="cert-desc">Certificate of active innovation and hardware-software system design at the Hackspiration'24 hackathon powered by Devfolio and MLSC.</p>
+            <div class="cert-tags">
+              <span>Hackathon</span><span>Hardware</span><span>Devfolio</span><span>Innovation</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="devfolio-hackspiration">📄 View Document</button>
+            <a href="certificates/Devfolio_MLSC_Hackspiration24_Certificate.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 8. Aashman Technicals Internship Letter -->
+        <div class="cert-card" data-category="experience" id="card-aashman-internship">
+          <div class="cert-thumb-box" data-cert-id="aashman-internship">
+            <img src="certificates/thumbnails/Aashman_Technicals_Embedded_Systems_Internship_Letter_thumb.webp" alt="Aashman Technicals Internship Letter" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Aashman Technicals Pvt Ltd</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Embedded Systems Internship Experience Letter</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 7 October 2026</span>
+              <span class="cert-id">Jun–Oct 2026 Tenure</span>
+            </div>
+            <p class="cert-desc">Experience letter validating 2-axis GRBL motion controller for agricultural laser weeding (1mm accuracy), custom PCB level-shifters, and wireless networking.</p>
+            <div class="cert-tags">
+              <span>Firmware</span><span>GRBL</span><span>KiCAD</span><span>XY Gantry</span><span>Motor Control</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="aashman-internship">📄 View Document</button>
+            <a href="certificates/Aashman_Technicals_Embedded_Systems_Internship_Letter.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 9. UST Global RTL Code Generator -->
+        <div class="cert-card" data-category="experience" id="card-ust-rtl">
+          <div class="cert-thumb-box" data-cert-id="ust-rtl-internship">
+            <img src="certificates/thumbnails/UST_Global_VIT_RTL_Code_Generator_Internship_Confirmation_thumb.webp" alt="UST Global RTL Project Confirmation" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">UST Global · VIT Pune</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">RTL Code Generator for VLSI Project Completion</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 26 May 2026</span>
+              <span class="cert-id">Jan–May 2026 Tenure</span>
+            </div>
+            <p class="cert-desc">Official confirmation letter for engineering an automated AI RTL code generation pipeline for VLSI design, testbench synthesis, and Icarus Verilog verification.</p>
+            <div class="cert-tags">
+              <span>UST Global</span><span>Agentic RTL</span><span>Verilog</span><span>EDA Tools</span><span>AI for VLSI</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="ust-rtl-internship">📄 View Document</button>
+            <a href="certificates/UST_Global_VIT_RTL_Code_Generator_Internship_Confirmation.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 10. Amotech Labs LoRa Project -->
+        <div class="cert-card" data-category="experience" id="card-amotech-lora">
+          <div class="cert-thumb-box" data-cert-id="amotech-lora-completion">
+            <img src="certificates/thumbnails/Amotech_Labs_LoRa_Industrial_Automation_Completion_Letter_thumb.webp" alt="Amotech Labs LoRa Project Completion Letter" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Amotech Labs · VIT Pune</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">LoRa Industrial Automation Project Completion Letter</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 7 November 2025</span>
+              <span class="cert-id">Amotech Labs Project</span>
+            </div>
+            <p class="cert-desc">Technical completion letter validating multi-node LoRa wireless telemetry, relay actuation, and firmware implemented on PIC18F and ESP32 controllers.</p>
+            <div class="cert-tags">
+              <span>LoRa E220</span><span>PIC18F452</span><span>ESP32</span><span>Industrial IoT</span><span>UART</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="amotech-lora-completion">📄 View Document</button>
+            <a href="certificates/Amotech_Labs_LoRa_Industrial_Automation_Completion_Letter.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 11. Asian Institute of Technology Thailand -->
+        <div class="cert-card" data-category="experience" id="card-ait-thailand">
+          <div class="cert-thumb-box" data-cert-id="ait-thailand-acceptance">
+            <img src="certificates/thumbnails/AIT_Thailand_Research_Internship_Acceptance_Letter_thumb.webp" alt="Asian Institute of Technology Thailand Acceptance Letter" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">Asian Institute of Technology</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">AIT Thailand Research Internship Acceptance Letter</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 20 July 2026</span>
+              <span class="cert-id">Special Degree Programs</span>
+            </div>
+            <p class="cert-desc">Official acceptance letter for the International Project-based Research Internship Program and Cultural Exposure at AIT Thailand campus.</p>
+            <div class="cert-tags">
+              <span>AIT Thailand</span><span>Global Immersion</span><span>Research Internship</span><span>Robotics</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="ait-thailand-acceptance">📄 View Document</button>
+            <a href="certificates/AIT_Thailand_Research_Internship_Acceptance_Letter.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
+        </div>
+
+        <!-- 12. UpThink Edutech Internship Agreement -->
+        <div class="cert-card" data-category="experience" id="card-upthink">
+          <div class="cert-thumb-box" data-cert-id="upthink-internship-agreement">
+            <img src="certificates/thumbnails/UpThink_Edutech_Internship_Agreement_Annexure_thumb.webp" alt="UpThink Edutech Internship Agreement" loading="lazy" />
+            <div class="cert-thumb-overlay">
+              <span class="cert-overlay-action">🔍 Click to Preview</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="cert-header-meta">
+              <span class="cert-issuer-badge">UpThink Edutech Services</span>
+              <span class="cert-verified-pill">✓ Verified</span>
+            </div>
+            <h3 class="cert-name">Process Automation &amp; Full Stack Internship Agreement</h3>
+            <div class="cert-meta-row">
+              <span class="cert-date">📅 1 April 2025</span>
+              <span class="cert-id">2025–2026 Tenure</span>
+            </div>
+            <p class="cert-desc">Signed internship agreement annexure covering business process automation, full-stack application development, and software lifecycle maintenance.</p>
+            <div class="cert-tags">
+              <span>Automation</span><span>Python</span><span>Full Stack</span><span>Documentation</span>
+            </div>
+          </div>
+          <div class="cert-card-footer">
+            <button class="btn btn-primary btn-sm cert-view-btn" data-cert-id="upthink-internship-agreement">📄 View Document</button>
+            <a href="certificates/UpThink_Edutech_Internship_Agreement_Annexure.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm cert-download-link" download>↗ Download</a>
+          </div>
         </div>
 
       </div>
@@ -879,6 +1200,74 @@
     <div class="modal" id="projectModal">
       <button class="modal-close" id="modalClose">✕</button>
       <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CERTIFICATION DOCUMENT MODAL ═══════════════════════ -->
+  <div class="cert-modal-overlay" id="certModalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cert-modal" id="certModal">
+      <!-- Modal Header -->
+      <div class="cert-modal-header">
+        <div class="cert-modal-title-wrap">
+          <div class="cert-modal-badges">
+            <span class="cert-modal-issuer" id="certModalIssuer">Udemy</span>
+            <span class="cert-modal-category" id="certModalCategory">VLSI &amp; FPGA</span>
+            <span class="cert-modal-verified">✓ Verified Credential</span>
+          </div>
+          <h2 class="cert-modal-title" id="certModalTitle">Certificate Title</h2>
+          <div class="cert-modal-meta" id="certModalMeta">Issued: Mar 2026 · ID: UC-123456</div>
+        </div>
+        <div class="cert-modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="cert-modal-btn" id="certModalNewTab" title="Open full document in new tab">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span>Full Document</span>
+          </a>
+          <a href="#" class="cert-modal-btn" id="certModalDownload" download title="Download document file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download</span>
+          </a>
+          <button class="cert-modal-close" id="certModalClose" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+
+      <!-- Modal Main Viewport -->
+      <div class="cert-modal-body">
+        <button class="cert-nav-btn cert-nav-prev" id="certNavPrev" aria-label="Previous certificate" title="Previous document">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        
+        <div class="cert-viewer-container" id="certViewerContainer">
+          <iframe id="certModalIframe" class="cert-modal-iframe" src="" title="Document Preview"></iframe>
+          <div class="cert-modal-img-wrap" id="certModalImgWrap" style="display:none;">
+            <img id="certModalImg" src="" alt="Certificate preview" />
+          </div>
+          <div class="cert-mobile-pdf-fallback" id="certMobileFallback" style="display:none;">
+            <p>PDF document ready to inspect. Click below to view in full resolution:</p>
+            <a href="#" target="_blank" rel="noopener" class="btn btn-primary" id="certMobileOpenBtn">Open Full PDF</a>
+          </div>
+        </div>
+
+        <button class="cert-nav-btn cert-nav-next" id="certNavNext" aria-label="Next certificate" title="Next document">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Footer & Thumbnail Strip -->
+      <div class="cert-modal-footer">
+        <div class="cert-modal-info">
+          <div class="cert-modal-desc" id="certModalDesc">Description goes here...</div>
+          <div class="cert-modal-tags" id="certModalTags"></div>
+        </div>
+        <div class="cert-modal-gallery-bar">
+          <div class="cert-counter-wrap">
+            <span class="cert-counter" id="certCounter">Document 1 of 12</span>
+            <span class="cert-shortcut-hint">Tip: Use ◄ ► arrow keys to browse</span>
+          </div>
+          <div class="cert-thumbs-scroll" id="certThumbsScroll">
+            <!-- Dynamically populated thumbnails -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -556,3 +556,348 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
+// ═══════════════════════════════════════════════════════════════
+// CERTIFICATIONS & DOCUMENT VIEWER SYSTEM
+// ═══════════════════════════════════════════════════════════════
+
+const certsList = [
+  {
+    id: 'maven-digital-design',
+    title: 'Digital Design (RTL to GDSII Flow)',
+    issuer: 'Maven Silicon',
+    category: 'VLSI & EDA',
+    categoryFilter: 'vlsi',
+    date: '20 May 2026',
+    meta: 'MSUID: 9921062050 · Centre of Excellence in Semicon & RISC-V Partner',
+    filePath: 'certificates/Maven_Silicon_Digital_Design_Certificate.pdf',
+    thumbPath: 'certificates/thumbnails/Maven_Silicon_Digital_Design_Certificate_thumb.webp',
+    isPdf: true,
+    tags: ['Verilog HDL', 'RTL to GDSII', 'STA', 'ASIC', 'EDA Sign-off'],
+    desc: 'Official industry certification in complete ASIC digital design flow covering RTL modeling, logic synthesis, Static Timing Analysis (STA), clock tree synthesis, and GDSII tape-out.'
+  },
+  {
+    id: 'udemy-verilog-fpga',
+    title: 'Verilog for an FPGA Engineer with Xilinx Vivado',
+    issuer: 'Udemy',
+    category: 'VLSI & EDA',
+    categoryFilter: 'vlsi',
+    date: '27 March 2026',
+    meta: 'ID: UC-6cd73604-650a-4f28-9308-82b6070ef2fc · 16.5 Total Hours',
+    filePath: 'certificates/Udemy_Verilog_FPGA_Xilinx_Vivado_Design_Suite.pdf',
+    thumbPath: 'certificates/thumbnails/Udemy_Verilog_FPGA_Xilinx_Vivado_Design_Suite_thumb.webp',
+    isPdf: true,
+    tags: ['Verilog HDL', 'Xilinx Vivado', 'FPGA Prototyping', 'RTL Simulation', 'STA'],
+    desc: 'Comprehensive training on synthesizable Verilog HDL coding styles, testbench generation, simulation, timing constraints, and Vivado synthesis for Xilinx FPGAs.'
+  },
+  {
+    id: 'udemy-computer-arch',
+    title: 'Advanced Computer Architecture & Organization',
+    issuer: 'Udemy',
+    category: 'Embedded & Architecture',
+    categoryFilter: 'hardware-embedded',
+    date: '18 January 2026',
+    meta: 'ID: UC-fffb1d33-36b5-4bd0-9654-fc756adaf5b2 · 4.5 Total Hours',
+    filePath: 'certificates/Udemy_Advanced_Computer_Architecture_and_Organization.pdf',
+    thumbPath: 'certificates/thumbnails/Udemy_Advanced_Computer_Architecture_and_Organization_thumb.webp',
+    isPdf: true,
+    tags: ['Microarchitecture', 'Pipelining', 'Branch Prediction', 'Cache Hierarchy', 'ILP'],
+    desc: 'Mastery of modern processor microarchitecture, multi-stage pipelining hazards, cache memory hierarchies, memory interleaving, and instruction-level parallelism.'
+  },
+  {
+    id: 'coursera-deeplearning',
+    title: 'Deep Learning Specialization (5 Courses)',
+    issuer: 'DeepLearning.AI · Coursera',
+    category: 'VLSI & EDA',
+    categoryFilter: 'vlsi',
+    date: '29 March 2026',
+    meta: 'Credential ID: 8EHPZA8GVCFA · Andrew Ng',
+    filePath: 'certificates/DeepLearning_AI_Coursera_Specialization.pdf',
+    thumbPath: 'certificates/thumbnails/DeepLearning_AI_Coursera_Specialization_thumb.webp',
+    isPdf: true,
+    tags: ['Deep Learning', 'CNNs', 'Sequence Models', 'Transformers', 'TensorFlow', 'Edge AI'],
+    desc: '5-course specialization by Andrew Ng mastering Convolutional Neural Networks (CNNs), RNNs/LSTMs, Transformers, and optimization strategies for AI hardware acceleration.'
+  },
+  {
+    id: 'ieee-icft2025',
+    title: 'Smart Voltaic Keys (IEEE ICFT 2025 Presentation)',
+    issuer: 'IEEE Maharashtra Section · WCE Sangli',
+    category: 'Research & Honors',
+    categoryFilter: 'research-awards',
+    date: '7–8 November 2025',
+    meta: 'Certificate ID: WCE/ICFT2025/66708/Author/086 · IEEE Sponsored',
+    filePath: 'certificates/IEEE_ICFT2025_Smart_Voltaic_Keys_Paper_Presentation.pdf',
+    thumbPath: 'certificates/thumbnails/IEEE_ICFT2025_Smart_Voltaic_Keys_Paper_Presentation_thumb.webp',
+    isPdf: true,
+    tags: ['IEEE ICFT 2025', 'Piezoelectric', 'Smart Keyboards', 'Energy Harvesting', 'MEMS'],
+    desc: 'Official conference presentation certificate for co-authoring the peer-reviewed research paper "Smart Voltaic Keys of Keyboard for Energy Generation" at IEEE ICFT 2025.'
+  },
+  {
+    id: 'physics-brawl-charles',
+    title: 'Physics Brawl Online — 208th Rank Globally',
+    issuer: 'Charles University, Prague & FYKOS',
+    category: 'Research & Honors',
+    categoryFilter: 'research-awards',
+    date: '23 November 2022',
+    meta: 'Faculty of Mathematics and Physics · Category A · Team: The Three Musketeers',
+    filePath: 'certificates/Charles_University_Physics_Brawl_208th_Rank.png',
+    thumbPath: 'certificates/thumbnails/Charles_University_Physics_Brawl_208th_Rank_thumb.webp',
+    isPdf: false,
+    tags: ['Physics Brawl', 'Charles University', 'Global Rank 208th', 'Analytical Physics'],
+    desc: 'Global physics competition diploma awarded by Charles University Prague. Ranked 208th internationally in Category A solving advanced mechanics and electromagnetism problems.'
+  },
+  {
+    id: 'devfolio-hackspiration',
+    title: 'Hackspiration\'24 Certificate of Innovation',
+    issuer: 'Devfolio · MLSC VIT Pune',
+    category: 'Research & Honors',
+    categoryFilter: 'research-awards',
+    date: '2024',
+    meta: 'Microsoft Learn Student Ambassador · Devfolio Hackathon',
+    filePath: 'certificates/Devfolio_MLSC_Hackspiration24_Certificate.pdf',
+    thumbPath: 'certificates/thumbnails/Devfolio_MLSC_Hackspiration24_Certificate_thumb.webp',
+    isPdf: true,
+    tags: ['Devfolio', 'Microsoft Learn', 'Hackspiration', 'Rapid Prototyping', 'Hardware Innovation'],
+    desc: 'Certificate of active participation and technical achievement at Hackspiration\'24 hackathon, building rapid hardware and embedded automation prototypes.'
+  },
+  {
+    id: 'aashman-internship',
+    title: 'Embedded Systems Internship Experience Letter',
+    issuer: 'Aashman Technicals Pvt. Ltd.',
+    category: 'Internships & Letters',
+    categoryFilter: 'experience',
+    date: '7 October 2026',
+    meta: 'Tenure: June 2, 2026 – October 5, 2026 · Chetan S. Shinde (Director/CTO)',
+    filePath: 'certificates/Aashman_Technicals_Embedded_Systems_Internship_Letter.pdf',
+    thumbPath: 'certificates/thumbnails/Aashman_Technicals_Embedded_Systems_Internship_Letter_thumb.webp',
+    isPdf: true,
+    tags: ['Firmware', 'GRBL', 'KiCAD', 'XY Gantry', 'Motor Control', 'Mesh Network'],
+    desc: 'Official experience letter validating 2-axis GRBL motion controller for agricultural laser weeding (1mm accuracy), custom PCB level-shifters, and wireless networking.'
+  },
+  {
+    id: 'ust-rtl-internship',
+    title: 'RTL Code Generator for VLSI Project Completion',
+    issuer: 'UST Global & VIT Pune',
+    category: 'Internships & Letters',
+    categoryFilter: 'experience',
+    date: '26 May 2026',
+    meta: 'Tenure: Jan 5, 2026 – May 4, 2026 · Mentors: Roshan Dsouza (UST), Dr. Yenkikar & Dr. Chopde',
+    filePath: 'certificates/UST_Global_VIT_RTL_Code_Generator_Internship_Confirmation.pdf',
+    thumbPath: 'certificates/thumbnails/UST_Global_VIT_RTL_Code_Generator_Internship_Confirmation_thumb.webp',
+    isPdf: true,
+    tags: ['UST Global', 'Agentic RTL', 'Verilog Synthesis', 'Automated Testbench', 'Icarus Verilog'],
+    desc: 'Formal industry project letter for engineering an automated AI RTL code generation pipeline for VLSI design, testbench synthesis, and automated simulation verification.'
+  },
+  {
+    id: 'amotech-lora-completion',
+    title: 'LoRa Industrial Automation Project Completion Letter',
+    issuer: 'Amotech Labs & VIT Pune',
+    category: 'Internships & Letters',
+    categoryFilter: 'experience',
+    date: '7 November 2025',
+    meta: 'Mentors: Amol Manal (Amotech Labs) & Prof. Ashwinee Barbadekar (VIT)',
+    filePath: 'certificates/Amotech_Labs_LoRa_Industrial_Automation_Completion_Letter.pdf',
+    thumbPath: 'certificates/thumbnails/Amotech_Labs_LoRa_Industrial_Automation_Completion_Letter_thumb.webp',
+    isPdf: true,
+    tags: ['LoRa E220', 'PIC18F452', 'ESP32', 'Industrial IoT', 'UART Telemetry'],
+    desc: 'Validation letter for architecting a multi-node LoRa remote monitoring and relay actuation system across ESP32 and PIC18F microcontrollers with long-range RF telemetry.'
+  },
+  {
+    id: 'ait-thailand-acceptance',
+    title: 'AIT Thailand Research Internship Acceptance Letter',
+    issuer: 'Asian Institute of Technology, Thailand',
+    category: 'Internships & Letters',
+    categoryFilter: 'experience',
+    date: '20 July 2026',
+    meta: 'Passport Y7839111 · Special Degree Programs · Dr. Ranadheer Mandadi',
+    filePath: 'certificates/AIT_Thailand_Research_Internship_Acceptance_Letter.pdf',
+    thumbPath: 'certificates/thumbnails/AIT_Thailand_Research_Internship_Acceptance_Letter_thumb.webp',
+    isPdf: true,
+    tags: ['AIT Thailand', 'Global Immersion', 'Research Internship', 'Robotics & Automation'],
+    desc: 'Official acceptance letter for the International Project-based Research Internship Program and Cultural Exposure at Asian Institute of Technology (Pathum Thani, Thailand).'
+  },
+  {
+    id: 'upthink-internship-agreement',
+    title: 'Process Automation & Full Stack Internship Agreement',
+    issuer: 'UpThink Edutech Services Pvt. Ltd.',
+    category: 'Internships & Letters',
+    categoryFilter: 'experience',
+    date: '1 April 2025',
+    meta: 'Agreement Ref: UpThink/INTERNSHIP ANNEXURE/25-26/1.1 · Apurva Yadav (AVP)',
+    filePath: 'certificates/UpThink_Edutech_Internship_Agreement_Annexure.pdf',
+    thumbPath: 'certificates/thumbnails/UpThink_Edutech_Internship_Agreement_Annexure_thumb.webp',
+    isPdf: true,
+    tags: ['Process Automation', 'Full Stack Development', 'Python', 'Web Solutions'],
+    desc: 'Signed internship agreement annexure covering business process automation, full-stack application development, and software lifecycle maintenance solutions.'
+  }
+];
+
+let activeCertIdx = 0;
+const certModalOverlay = document.getElementById('certModalOverlay');
+const certModalTitle = document.getElementById('certModalTitle');
+const certModalIssuer = document.getElementById('certModalIssuer');
+const certModalCategory = document.getElementById('certModalCategory');
+const certModalMeta = document.getElementById('certModalMeta');
+const certModalDesc = document.getElementById('certModalDesc');
+const certModalTags = document.getElementById('certModalTags');
+const certModalIframe = document.getElementById('certModalIframe');
+const certModalImgWrap = document.getElementById('certModalImgWrap');
+const certModalImg = document.getElementById('certModalImg');
+const certMobileFallback = document.getElementById('certMobileFallback');
+const certMobileOpenBtn = document.getElementById('certMobileOpenBtn');
+const certModalNewTab = document.getElementById('certModalNewTab');
+const certModalDownload = document.getElementById('certModalDownload');
+const certCounter = document.getElementById('certCounter');
+const certThumbsScroll = document.getElementById('certThumbsScroll');
+const certNavPrev = document.getElementById('certNavPrev');
+const certNavNext = document.getElementById('certNavNext');
+const certModalClose = document.getElementById('certModalClose');
+
+// Populate thumbnail strip
+if (certThumbsScroll) {
+  certThumbsScroll.innerHTML = certsList.map((c, i) => `
+    <div class="cert-thumb-chip ${i === 0 ? 'active' : ''}" data-index="${i}" title="${c.title}">
+      <img src="${c.thumbPath}" alt="${c.title}" loading="lazy" />
+    </div>
+  `).join('');
+
+  certThumbsScroll.querySelectorAll('.cert-thumb-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const idx = parseInt(chip.dataset.index, 10);
+      renderCertModal(idx);
+    });
+  });
+}
+
+function renderCertModal(index) {
+  if (index < 0) index = certsList.length - 1;
+  if (index >= certsList.length) index = 0;
+  activeCertIdx = index;
+  const cert = certsList[activeCertIdx];
+  if (!cert) return;
+
+  certModalTitle.textContent = cert.title;
+  certModalIssuer.textContent = cert.issuer;
+  certModalCategory.textContent = cert.category;
+  certModalMeta.textContent = `📅 Issued: ${cert.date} · ${cert.meta}`;
+  certModalDesc.textContent = cert.desc;
+  certModalTags.innerHTML = cert.tags.map(t => `<span>${t}</span>`).join('');
+  certCounter.textContent = `Document ${activeCertIdx + 1} of ${certsList.length}`;
+
+  certModalNewTab.href = cert.filePath;
+  certModalDownload.href = cert.filePath;
+  if (certMobileOpenBtn) certMobileOpenBtn.href = cert.filePath;
+
+  if (cert.isPdf) {
+    certModalImgWrap.style.display = 'none';
+    certModalIframe.style.display = 'block';
+    certModalIframe.src = cert.filePath;
+  } else {
+    certModalIframe.style.display = 'none';
+    certModalIframe.src = '';
+    certModalImgWrap.style.display = 'flex';
+    certModalImg.src = cert.filePath;
+    certModalImg.alt = cert.title;
+  }
+
+  // Update active thumbnail chip
+  if (certThumbsScroll) {
+    certThumbsScroll.querySelectorAll('.cert-thumb-chip').forEach((chip, i) => {
+      chip.classList.toggle('active', i === activeCertIdx);
+      if (i === activeCertIdx) {
+        chip.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    });
+  }
+}
+
+function openCertModal(identifier) {
+  let idx = 0;
+  if (typeof identifier === 'number') {
+    idx = identifier;
+  } else if (typeof identifier === 'string') {
+    const found = certsList.findIndex(c => c.id === identifier);
+    if (found !== -1) idx = found;
+  }
+  renderCertModal(idx);
+  certModalOverlay.classList.add('open');
+  certModalOverlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal() {
+  certModalOverlay.classList.remove('open');
+  certModalOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    if (!certModalOverlay.classList.contains('open')) {
+      certModalIframe.src = '';
+    }
+  }, 300);
+}
+
+// Event Listeners for Document Modal
+if (certNavPrev) certNavPrev.addEventListener('click', () => renderCertModal(activeCertIdx - 1));
+if (certNavNext) certNavNext.addEventListener('click', () => renderCertModal(activeCertIdx + 1));
+if (certModalClose) certModalClose.addEventListener('click', closeCertModal);
+if (certModalOverlay) {
+  certModalOverlay.addEventListener('click', (e) => {
+    if (e.target === certModalOverlay) closeCertModal();
+  });
+}
+
+// Card button clicks & thumbnail clicks
+document.querySelectorAll('.cert-view-btn, .cert-thumb-box').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const id = el.dataset.certId;
+    openCertModal(id);
+  });
+});
+
+// Gallery button in section header
+const openCertGalleryBtn = document.getElementById('open-cert-gallery-btn');
+if (openCertGalleryBtn) {
+  openCertGalleryBtn.addEventListener('click', () => {
+    openCertModal(0);
+  });
+}
+
+// Keyboard navigation
+window.addEventListener('keydown', (e) => {
+  if (certModalOverlay && certModalOverlay.classList.contains('open')) {
+    if (e.key === 'Escape') closeCertModal();
+    if (e.key === 'ArrowLeft') renderCertModal(activeCertIdx - 1);
+    if (e.key === 'ArrowRight') renderCertModal(activeCertIdx + 1);
+  }
+});
+
+// Category filtering for certifications
+document.querySelectorAll('.cf-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.certFilter;
+    document.querySelectorAll('.cf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.cert-card').forEach(card => {
+      if (filter === 'all') {
+        card.classList.remove('hidden');
+      } else {
+        const cat = card.dataset.category || '';
+        card.classList.toggle('hidden', cat !== filter);
+      }
+    });
+  });
+});
+
+// Hero CTA button smooth scroll
+const heroCertsBtn = document.getElementById('hero-certs-btn');
+if (heroCertsBtn) {
+  heroCertsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById('certifications');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
